@@ -1,0 +1,58 @@
+# Go build artifacts
+bin/
+build/
+dist/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Dependency directories
+vendor/
+
+# Go workspace
+go.work
+go.work.sum
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+*.bak
+*.old
+*.DS_Store
+
+# IDE / Editor configs
+.vscode/
+.idea/
+*.iml
+
+# Environment and config files
+.env
+.env.local
+.env.*.local
+
+# Generated files
+coverage.out
+docs/swagger/*
+
+# Docker
+docker-compose.override.yml
+docker-data/
+*.pid
+
+# Database volumes
+db_data/
+pgdata/
+
+# System files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Custom folders for this project
+/tmp/
+/uploads/
