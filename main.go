@@ -13,20 +13,17 @@ func main() {
 	cfg := config.Load()
 	db.Connect(cfg)
 
-	// مهاجرت خودکار جداول اولیه
 	if err := db.DB.AutoMigrate(&user.User{}); err != nil {
 		log.Fatalf("AutoMigrate failed: %v", err)
 	}
 
-	// راه‌اندازی Gin
 	r := gin.Default()
 
-	// یک روت ساده برای تست
 	r.GET("/health", func(c *gin.Context) {
 		c.JSON(200, gin.H{"status": "ok"})
 	})
 
-	// TODO: register module routes (بعداً)
+	// TODO: register module routes
 	// routes.Register(r, cfg)
 
 	r.Run(":" + cfg.Port)
