@@ -1,4 +1,4 @@
-# 🧩 Go Modular API — NestJS-style Architecture
+# 🧩 Go Modular API
 
 A clean, modular boilerplate for building APIs using **Go + Gin + PostgreSQL + JWT + WebSocket**.  
 Inspired by **NestJS-style** modular architecture with clear separation of layers (Handler, Service, Repository).
@@ -52,15 +52,18 @@ myapp/
 ## ⚙️ Setup & Run
 
 ### 1️⃣ Prerequisites
+
 - [Go](https://go.dev/dl/) 1.20+
 - [Docker](https://www.docker.com/) (optional for PostgreSQL)
 
 ### 2️⃣ Install Dependencies
+
 ```bash
 go mod tidy
 ```
 
 ### 3️⃣ Start Database (optional via Docker)
+
 ```bash
 docker compose up -d
 ```
@@ -68,29 +71,34 @@ docker compose up -d
 You can also use your own PostgreSQL instance and set the `DATABASE_URL` environment variable.
 
 ### 4️⃣ Run the App
+
 ```bash
 go run main.go
 ```
 
 ### 5️⃣ Test Health Endpoint
+
 Visit:
+
 ```
 http://localhost:8080/health
 ```
+
 Response:
+
 ```json
-{"status": "ok"}
+{ "status": "ok" }
 ```
 
 ---
 
 ## 🔑 Environment Variables
 
-| Variable | Description | Default |
-|-----------|--------------|----------|
-| `PORT` | Server port | `8080` |
+| Variable       | Description                  | Default                                                            |
+| -------------- | ---------------------------- | ------------------------------------------------------------------ |
+| `PORT`         | Server port                  | `8080`                                                             |
 | `DATABASE_URL` | PostgreSQL connection string | `postgres://postgres:password@localhost:5432/mydb?sslmode=disable` |
-| `JWT_SECRET` | JWT secret key | `supersecretkey` |
+| `JWT_SECRET`   | JWT secret key               | `supersecretkey`                                                   |
 
 ---
 
@@ -98,39 +106,39 @@ Response:
 
 This project follows several key software architecture patterns:
 
-- **Layered Architecture** — separation of Handler, Service, and Repository layers.  
-- **Dependency Injection** — loose coupling via struct injection.  
-- **Repository Pattern** — abstracted data access.  
-- **Module Pattern (NestJS style)** — self-contained feature modules.  
+- **Layered Architecture** — separation of Handler, Service, and Repository layers.
+- **Dependency Injection** — loose coupling via struct injection.
+- **Repository Pattern** — abstracted data access.
+- **Module Pattern (NestJS style)** — self-contained feature modules.
 - **Observer Pattern** — used for WebSocket hub & real-time events.
 
 ---
 
 ## 🧩 Modules Overview
 
-| Module | Description |
-|---------|--------------|
+| Module | Description                        |
+| ------ | ---------------------------------- |
 | `auth` | JWT authentication & authorization |
-| `user` | User management |
-| `chat` | WebSocket-based real-time chat |
+| `user` | User management                    |
+| `chat` | WebSocket-based real-time chat     |
 
 ---
 
 ## 🔮 Roadmap
 
-1. ✅ Basic modular skeleton (this step)  
-2. 🧱 Add PostgreSQL integration with GORM  
-3. 🔐 Implement JWT authentication (login/register)  
-4. 📜 Add Swagger documentation  
-5. 🔌 Add WebSocket chat module  
-6. 🧩 Add unit tests & CI setup  
+1. ✅ Basic modular skeleton (this step)
+2. 🧱 Add PostgreSQL integration with GORM
+3. 🔐 Implement JWT authentication (login/register)
+4. 📜 Add Swagger documentation
+5. 🔌 Add WebSocket chat module
+6. 🧩 Add unit tests & CI setup
 
 ---
 
 ## 🧑‍💻 Author
 
-**Reza Hashemi**  
-Base stack: Go 1.20+, Gin, GORM, PostgreSQL  
+**[Reza Hashemi](https://github.com/rezaHashemi8139/)**  
+Base stack: Go 1.20+, Gin, GORM, PostgreSQL
 
 ---
 
