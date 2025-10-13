@@ -1,7 +1,7 @@
 # 🧩 Go Modular API
 
 A clean, modular boilerplate for building APIs using **Go + Gin + PostgreSQL + JWT + WebSocket**.  
-Inspired by **NestJS-style** modular architecture with clear separation of layers (Handler, Service, Repository).
+Modular architecture with clear separation of layers (Handler, Service, Repository).
 
 ---
 
@@ -20,7 +20,7 @@ Inspired by **NestJS-style** modular architecture with clear separation of layer
 ## 📂 Project Structure
 
 ```
-myapp/
+shopping-list/
 │
 ├── cmd/                  # CLI commands (future use)
 ├── config/               # App configuration
