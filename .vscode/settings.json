@@ -23,6 +23,7 @@
     "pgservicefile",
     "qpack",
     "quic",
+    "reza",
     "sslmode",
     "twitchyliquid",
     "ugorji",
