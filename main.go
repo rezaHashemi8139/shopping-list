@@ -29,8 +29,17 @@ func main() {
 		c.JSON(200, gin.H{"status": "ok"})
 	})
 
-	// TODO: register module routes
-	// routes.Register(r, cfg)
+	// Register user routes
+	user.RegisterRoutes(r, db.DB)
+
+	// Handle 404 - route not found
+	r.NoRoute(func(c *gin.Context) {
+		c.JSON(404, gin.H{
+			"error":   "Not Found",
+			"message": "متأسفانه صفحه مورد نظر یافت نشد!",
+			"path":    c.Request.URL.Path,
+		})
+	})
 
 	r.Run(":" + cfg.Port)
 }
