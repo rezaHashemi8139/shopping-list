@@ -16,5 +16,6 @@ func Connect(cfg *config.Config) {
 	if err != nil {
 		log.Fatalf("failed to connect database: %v", err)
 	}
+	log.Println("Database connected successfully!")
 	DB = db
 }

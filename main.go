@@ -4,12 +4,18 @@ import (
 	"log"
 
 	"github.com/gin-gonic/gin"
+	"github.com/joho/godotenv"
 	"github.com/rezaHashemi8139/shopping-list/config"
 	"github.com/rezaHashemi8139/shopping-list/db"
 	"github.com/rezaHashemi8139/shopping-list/modules/user"
 )
 
 func main() {
+	// Load .env file
+	if err := godotenv.Load(); err != nil {
+		log.Println("No .env file found or error loading it, using default/environment values")
+	}
+
 	cfg := config.Load()
 	db.Connect(cfg)
 
