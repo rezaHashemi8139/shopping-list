@@ -28,6 +28,10 @@ func main() {
 	// Set trusted proxies (for security)
 	r.SetTrustedProxies(nil) // Don't trust any proxies in development
 
+	r.GET("/", func(c *gin.Context) {
+		c.JSON(200, gin.H{"status": "ok", "message": "Welcome to the API"})
+	})
+
 	r.GET("/health", func(c *gin.Context) {
 		c.JSON(200, gin.H{"status": "ok"})
 	})
@@ -39,7 +43,7 @@ func main() {
 	r.NoRoute(func(c *gin.Context) {
 		c.JSON(404, gin.H{
 			"error":   "Not Found",
-			"message": "متأسفانه صفحه مورد نظر یافت نشد!",
+			"message": "unfortunately the page you are looking for was not found!",
 			"path":    c.Request.URL.Path,
 		})
 	})
