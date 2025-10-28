@@ -81,7 +81,7 @@ go run main.go
 Visit:
 
 ```
-http://localhost:8080/health
+http://localhost:5555/health
 ```
 
 Response:
@@ -96,7 +96,7 @@ Response:
 
 | Variable       | Description                  | Default                                                            |
 | -------------- | ---------------------------- | ------------------------------------------------------------------ |
-| `PORT`         | Server port                  | `8080`                                                             |
+| `PORT`         | Server port                  | `5555`                                                             |
 | `DATABASE_URL` | PostgreSQL connection string | `postgres://postgres:password@localhost:5432/mydb?sslmode=disable` |
 | `JWT_SECRET`   | JWT secret key               | `supersecretkey`                                                   |
 
