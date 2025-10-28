@@ -100,6 +100,9 @@
         margin-bottom: 15px;
         border-radius: 8px;
         transition: all 0.3s ease;
+        display: block;
+        color: unset;
+        text-decoration: none;
       }
 
       .endpoint:hover {
@@ -179,7 +182,7 @@
       <div class="endpoints">
         <h2>📍 Available Endpoints</h2>
 
-        <div class="endpoint">
+        <a href="/health" class="endpoint" target="_blank">
           <div>
             <span class="method get">GET</span>
             <strong>Health Check</strong>
@@ -188,16 +191,7 @@
           <div class="endpoint-desc">
             Check if the API is running and healthy
           </div>
-        </div>
-
-        <div class="endpoint">
-          <div>
-            <span class="method post">POST</span>
-            <strong>User Registration</strong>
-          </div>
-          <div class="endpoint-url">/api/users/register</div>
-          <div class="endpoint-desc">Register a new user account</div>
-        </div>
+        </a>
       </div>
 
       <div class="footer">
