@@ -25,6 +25,9 @@ func main() {
 
 	r := gin.Default()
 
+	// Set trusted proxies (for security)
+	r.SetTrustedProxies(nil) // Don't trust any proxies in development
+
 	r.GET("/health", func(c *gin.Context) {
 		c.JSON(200, gin.H{"status": "ok"})
 	})
@@ -40,6 +43,13 @@ func main() {
 			"path":    c.Request.URL.Path,
 		})
 	})
+
+	// Log server info before starting
+	log.Println("========================================")
+	log.Printf("✅ Server is running on: http://localhost:%s", cfg.Port)
+	log.Println("📍 Health endpoint:")
+	log.Printf("   - GET  http://localhost:%s/health", cfg.Port)
+	log.Println("========================================")
 
 	r.Run(":" + cfg.Port)
 }
