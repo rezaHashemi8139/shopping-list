@@ -76,6 +76,12 @@ You can also use your own PostgreSQL instance and set the `DATABASE_URL` environ
 go run main.go
 ```
 
+### 4️⃣ Run the App for development
+
+```bash
+air
+```
+
 ### 5️⃣ Test Health Endpoint
 
 Visit:
