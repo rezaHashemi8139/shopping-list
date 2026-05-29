@@ -1,0 +1,24 @@
+---
+description: Local project instructions
+alwaysApply: true
+---
+
+# Project Instructions
+
+## Response
+
+- Be concise.
+- Return only final code.
+- Do not explain changes unless asked.
+
+## Workflow
+
+- Only read files relevant to the task.
+- Do not scan the whole repository.
+- Do not run build/tests after every change unless explicitly requested.
+
+## Code Rules
+
+- No Persian comments in code.
+- Never install new dependencies without approval.
+- Use kebab-case for files and PascalCase for React components.
